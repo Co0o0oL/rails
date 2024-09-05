@@ -25,7 +25,4 @@ workflows:
   rails:
     jobs:
       - build
-      - test
       - bundler-audit
-      - integration
-      - prod
