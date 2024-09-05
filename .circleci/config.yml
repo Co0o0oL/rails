@@ -25,16 +25,7 @@ workflows:
   rails:
     jobs:
       - build
-      - test:
-          requires:
-            - build
-      - bundler-audit:
-          requires:
-            - test
-      - integration:
-          requires:
-            - bundler-audit
-      - prod:
-          type: approval
-          requires:
-            - integration
+      - test
+      - bundler-audit
+      - integration
+      - prod
